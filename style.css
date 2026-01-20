@@ -20,7 +20,7 @@ body {
     text-align: right;
 }
 
-.keyboard{
+.keyboard {
     display: flex;
 }
 
@@ -43,6 +43,15 @@ body {
     align-items: center;
 }
 
+.numKeys div:hover {
+    background-color: #a0a0a0;
+}
+
+.numKeys div:active {
+    color: #fff;
+    background-color: rgb(81, 81, 81);
+}
+
 .funcKeys {
     display: flex;
     flex-direction: column;
@@ -50,12 +59,21 @@ body {
     gap: 10px 0;
 }
 
-.funcKeys div{
-     background-color: #fafafa;
+.funcKeys div {
+    background-color: #fafafa;
     width: 50px;
     height: 50px;
     border: 2px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.funcKeys div:hover {
+    background-color: #c4fffa;
+}
+
+.funcKeys div:active {
+    color: #fff;
+    background-color: #001678;
 }

@@ -38,7 +38,7 @@ function funcKeysHandler(e) {
     if (e.target.dataset.keyvalue == "=") {
         console.log("AUQUI")
         operate();
-        return;
+        return; 
     }
     operator = e.target.dataset.keyvalue;
     display.innerText = "0";
