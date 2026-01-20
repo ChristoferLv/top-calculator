@@ -26,6 +26,8 @@ function updateDisplay() {
 }
 
 function numKeysHandler(e) {
+    if (e.target.dataset.keyvalue == null)
+        return;
     if (operator) {
         if (e.target.dataset.keyvalue == "AC") {
             num2 = "";
@@ -61,6 +63,12 @@ function funcKeysHandler(e) {
         operate();
         return;
     }
+    if (operator != "") {
+        operate();
+        operator = e.target.dataset.keyvalue;
+        return;
+    }
+    if (num1 == "") num1 = "0";
     operator = e.target.dataset.keyvalue;
     display.innerText = "0";
 }
@@ -83,19 +91,25 @@ function divide(a, b) {
 };
 
 function operate() {
-    console.log(operator)
     switch (operator) {
         case "+":
-            num1 = parseFloat(num1) + parseFloat(num2);
+            num1 = String(parseFloat(num1) + parseFloat(num2));
             break;
         case "-":
-            num1 = parseFloat(num1) - parseFloat(num2);
+            num1 = String(parseFloat(num1) - parseFloat(num2));
             break;
         case "*":
-            num1 = parseFloat(num1) * parseFloat(num2);
+            num1 = String(parseFloat(num1) * parseFloat(num2));
             break;
         case "/":
-            num1 = parseFloat(num1) / parseFloat(num2);
+            if (num2) {
+                display.innerText = "Não se pode dividir por 0";
+                num1 = "";
+                num2 = "";
+                operator = "";
+                return;
+            }
+            num1 = String(parseFloat(num1) / parseFloat(num2));
             break;
 
         default:
