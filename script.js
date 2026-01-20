@@ -35,6 +35,11 @@ function numKeysHandler(e) {
 }
 
 function funcKeysHandler(e) {
+    if (e.target.dataset.keyvalue == "=") {
+        console.log("AUQUI")
+        operate();
+        return;
+    }
     operator = e.target.dataset.keyvalue;
     display.innerText = "0";
 }
@@ -55,3 +60,27 @@ function multiply(a, b) {
 function divide(a, b) {
     return a / b;
 };
+
+function operate() {
+    console.log(operator)
+    switch (operator) {
+        case "+":
+            num1 = parseInt(num1) + parseInt(num2);
+            break;
+        case "-":
+            num1 = parseInt(num1) - parseInt(num2);
+            break;
+        case "*":
+            num1 = parseInt(num1) * parseInt(num2);
+            break;
+        case "/":
+            num1 = parseInt(num1) / parseInt(num2);
+            break;
+
+        default:
+            break;
+    }
+    num2 = "";
+    operator = "";
+    updateDisplay();
+}
