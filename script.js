@@ -27,9 +27,30 @@ function updateDisplay() {
 
 function numKeysHandler(e) {
     if (operator) {
-        num2 = num2 + e.target.dataset.keyvalue;
+        if (e.target.dataset.keyvalue == "AC") {
+            num2 = "";
+            display.innerText = "0";
+            return;
+        }
+        else {
+            if (e.target.dataset.keyvalue == ".") {
+                if (num2.includes(".")) return;
+                if (num2 == "") num2 = "0";
+            }
+            num2 = num2 + e.target.dataset.keyvalue;
+        }
     } else {
-        num1 = num1 + e.target.dataset.keyvalue;
+        if (e.target.dataset.keyvalue == "AC") {
+            num1 = "";
+            display.innerText = "0";
+            return;
+        } else {
+            if (e.target.dataset.keyvalue == ".") {
+                if (num1.includes(".")) return;
+                if (num1 == "") num1 = "0";
+            }
+            num1 = num1 + e.target.dataset.keyvalue;
+        }
     }
     updateDisplay();
 }
@@ -38,7 +59,7 @@ function funcKeysHandler(e) {
     if (e.target.dataset.keyvalue == "=") {
         console.log("AUQUI")
         operate();
-        return; 
+        return;
     }
     operator = e.target.dataset.keyvalue;
     display.innerText = "0";
@@ -65,16 +86,16 @@ function operate() {
     console.log(operator)
     switch (operator) {
         case "+":
-            num1 = parseInt(num1) + parseInt(num2);
+            num1 = parseFloat(num1) + parseFloat(num2);
             break;
         case "-":
-            num1 = parseInt(num1) - parseInt(num2);
+            num1 = parseFloat(num1) - parseFloat(num2);
             break;
         case "*":
-            num1 = parseInt(num1) * parseInt(num2);
+            num1 = parseFloat(num1) * parseFloat(num2);
             break;
         case "/":
-            num1 = parseInt(num1) / parseInt(num2);
+            num1 = parseFloat(num1) / parseFloat(num2);
             break;
 
         default:

@@ -33,7 +33,7 @@ body {
     margin: 0 10px;
 }
 
-.numKeys div {
+.numKeys .key {
     background-color: #fafafa;
     width: 50px;
     height: 50px;
@@ -43,11 +43,11 @@ body {
     align-items: center;
 }
 
-.numKeys div:hover {
+.numKeys .key:hover {
     background-color: #a0a0a0;
 }
 
-.numKeys div:active {
+.numKeys .key:active {
     color: #fff;
     background-color: rgb(81, 81, 81);
 }
