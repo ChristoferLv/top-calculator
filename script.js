@@ -25,52 +25,62 @@ function updateDisplay() {
     }
 }
 
-function numKeysHandler(e) {
-    if (e.target.dataset.keyvalue == null)
-        return;
+function inputNumber(val) {
     if (operator) {
-        if (e.target.dataset.keyvalue == "AC") {
+        if (val == "AC") {
             num2 = "";
             display.innerText = "0";
             return;
         }
         else {
-            if (e.target.dataset.keyvalue == ".") {
+            if (val == ".") {
                 if (num2.includes(".")) return;
                 if (num2 == "") num2 = "0";
             }
-            num2 = num2 + e.target.dataset.keyvalue;
+            num2 = num2 + val;
         }
     } else {
-        if (e.target.dataset.keyvalue == "AC") {
+        if (val == "AC") {
             num1 = "";
             display.innerText = "0";
             return;
         } else {
-            if (e.target.dataset.keyvalue == ".") {
+            if (val == ".") {
                 if (num1.includes(".")) return;
                 if (num1 == "") num1 = "0";
             }
-            num1 = num1 + e.target.dataset.keyvalue;
+            num1 = num1 + val;
         }
     }
     updateDisplay();
 }
 
-function funcKeysHandler(e) {
-    if (e.target.dataset.keyvalue == "=") {
+function numKeysHandler(e) {
+    if (e.target.dataset.keyvalue == null)
+        return;
+    inputNumber(e.target.dataset.keyvalue);
+}
+
+function inputFunc(val) {
+    if (val == "Enter") {
         console.log("AUQUI")
         operate();
         return;
     }
     if (operator != "") {
         operate();
-        operator = e.target.dataset.keyvalue;
+        operator = val;
         return;
     }
     if (num1 == "") num1 = "0";
-    operator = e.target.dataset.keyvalue;
+    operator = val;
     display.innerText = "0";
+}
+
+function funcKeysHandler(e) {
+    if (e.target.dataset.keyvalue == null)
+        return;
+    inputFunc(e.target.dataset.keyvalue);
 }
 
 function add(a, b) {
@@ -102,7 +112,7 @@ function operate() {
             num1 = String(parseFloat(num1) * parseFloat(num2));
             break;
         case "/":
-            if (num2) {
+            if (num2 == "0") {
                 display.innerText = "Não se pode dividir por 0";
                 num1 = "";
                 num2 = "";
@@ -119,3 +129,20 @@ function operate() {
     operator = "";
     updateDisplay();
 }
+
+document.addEventListener('keydown', function (e) {
+    const allowedNumKeys = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "."];
+    const allowedFuncKeys = ["+", "-", "*", "/", "Backspace", "Enter"];
+
+    if (allowedNumKeys.includes(e.key)) {
+        inputNumber(e.key);
+        return;
+    }
+
+
+    console.log(e.key)
+    if (allowedFuncKeys.includes(e.key)) {
+        inputFunc(e.key);
+    }
+
+});
