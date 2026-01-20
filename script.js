@@ -23,6 +23,9 @@ function updateDisplay() {
     } else {
         display.innerText = num1;
     }
+    if (display.innerText == "") {
+        display.innerText = "0";
+    }
 }
 
 function inputNumber(val) {
@@ -62,6 +65,15 @@ function numKeysHandler(e) {
 }
 
 function inputFunc(val) {
+    if (val == "Backspace") {
+        if (operator) {
+            num2 = num2.slice(0, -1);
+        } else {
+            num1 = num1.slice(0, -1);
+        }
+        updateDisplay();
+        return;
+    }
     if (val == "Enter") {
         console.log("AUQUI")
         operate();
