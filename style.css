@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    height: 400px;
+    width: 300px;
+    background-color: rgb(162, 162, 162);
+    border: 2px solid black;
+}
+
+.display {
+    background-color: #fafafa;
+    border: 2px solid black;
+    margin: 10px 10px;
+    padding: 15px;
+    text-align: right;
+}
+
+.keyboard{
+    display: flex;
+}
+
+.numKeys {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 10px;
+}
+
+.numKeys div {
+    background-color: #fafafa;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.funcKeys {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+    gap: 10px 0;
+}
+
+.funcKeys div{
+     background-color: #fafafa;
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
