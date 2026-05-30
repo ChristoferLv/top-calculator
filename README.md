@@ -43,6 +43,10 @@ Uma calculadora totalmente funcional com:
 - CSS3
 - JavaScript (ES6)
 
+## Visualization
+
+<img width="1900" height="939" alt="TOP_Foundations_top-calculator_index html" src="https://github.com/user-attachments/assets/5b53ed06-0853-4dd4-864d-1e43658795f5" />
+
 ---
 
 Projeto desenvolvido seguindo: [The Odin Project - Calculator](https://www.theodinproject.com/lessons/foundations-calculator)
