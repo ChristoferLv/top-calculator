@@ -1,43 +1,43 @@
 # Calculator
 
-Calculadora funcional com interface gráfica desenvolvida como parte da trilha Foundations do [The Odin Project](https://www.theodinproject.com/lessons/foundations-calculator), focada em **lógica JavaScript** e **manipulação do DOM**.
+Functional calculator with a graphical interface developed as part of the Foundations path of [Foundations | The Odin Project](https://www.theodinproject.com/paths/foundations/courses/foundations), focused on **JavaScript logic** and **DOM manipulation**.
 
-## Objetivo do Projeto
+## Project Objective
 
-O objetivo principal era praticar:
-- Manipulação do DOM
-- Event listeners e handling de eventos
-- Lógica matemática e operações
-- Gerenciamento de estado da aplicação
-- Interface de usuário interativa
-- Debugging e resolução de problemas
+The main objective was to practice:
+- DOM manipulation
+- Event listeners and event handling
+- Math logic and operations
+- Application state management
+- Interactive user interface
+- Debugging and problem-solving
 
-## O que é?
+## What is it?
 
-Uma calculadora totalmente funcional com:
-- Interface visual semelhante a calculadoras reais
-- Operações básicas (adição, subtração, multiplicação, divisão)
-- Display para mostrar números e resultados
-- Botões para entrada de dados
-- Funcionalidade de limpar (clear)
-- Tratamento de erros (divisão por zero, etc.)
+A fully functional calculator with:
+- A visual interface similar to real calculators
+- Basic operations (addition, subtraction, multiplication, division)
+- A display to show numbers and results
+- Buttons for data input
+- Clear functionality
+- Error handling (division by zero, etc.)
 
-## Como usar
+## How to use
 
-1. Abra o arquivo `index.html` em seu navegador
-2. Use os botões numéricos para inserir números
-3. Clique nos operadores (+, -, ×, ÷) para realizar operações
-4. Pressione "=" para ver o resultado
-5. Use "AC" para limpar o display
+1. Open the `index.html` file in your browser
+2. Use the numeric buttons to enter numbers
+3. Click the operators (+, -, ×, ÷) to perform operations
+4. Press "=" to see the result
+5. Use "AC" to clear the display
 
-## Funcionalidades
+## Features
 
-- **Operações básicas**: +, -, ×, ÷
-- **Display interativo**: Mostra entrada e resultados
-- **Clear function**: Limpa a calculadora
-- **Tratamento de erros**: Previne operações inválidas
+- **Basic operations**: +, -, ×, ÷
+- **Interactive display**: Shows input and results
+- **Clear function**: Clears the calculator
+- **Error handling**: Prevents invalid operations
 
-## Tecnologias Utilizadas
+## Technologies Used
 
 - HTML5
 - CSS3
@@ -49,6 +49,6 @@ Uma calculadora totalmente funcional com:
 
 ---
 
-Projeto desenvolvido seguindo: [The Odin Project - Calculator](https://www.theodinproject.com/lessons/foundations-calculator)
+Project developed following: [The Odin Project - Calculator](https://www.theodinproject.com/lessons/foundations-calculator)
 
-📍 **Repositório principal com todos os projetos**: [ChristoferLv/TheOdinProject](https://github.com/ChristoferLv/TheOdinProject)
+📍 **Main repository with all projects**: [ChristoferLv/TheOdinProject](https://github.com/ChristoferLv/TheOdinProject)
