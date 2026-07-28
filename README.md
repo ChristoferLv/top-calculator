@@ -1,6 +1,6 @@
 # Calculator
 
-Functional calculator with a graphical interface developed as part of the Foundations path of [Foundations | The Odin Project](https://www.theodinproject.com/paths/foundations/courses/foundations), focused on **JavaScript logic** and **DOM manipulation**.
+Functional calculator with a graphical interface developed as part of the [Foundations path of The Odin Project](https://www.theodinproject.com/paths/foundations/courses/foundations), focused on **JavaScript logic** and **DOM manipulation**.
 
 ## Project Objective
 
